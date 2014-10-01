@@ -1,0 +1,41 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('slink_home') }}">Slink</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                {% if originalUrl is defined %}
+                    
+                    <li>
+                        {% if original is defined %}
+                            <a href="{{original}}" class="btn btn-small">
+                        {% else %}
+                            <a href="{{originalUrl}}" class="btn btn-small">
+                        {% endif %}
+                            <i class="fa fa-home"></i>
+                            Original Website
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{originalUrl}}" class="btn btn-small">
+                            <i class="fa fa-flag"></i>
+                            Inappropriate link
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a href="{{ path('slink_home') }}">Home</a></li>
+                    <li><a href="{{ path('slink_about') }}">ABOUT</a></li>
+                    <li><a href="{{ path('slink_contact') }}">CONTACT</a></li>
+                {% endif %}
+            </ul>
+        </div>
+       
+    </div>
+</div>
