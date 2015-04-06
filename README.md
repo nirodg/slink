@@ -20,4 +20,4 @@ In my case I used the next configuration and using annotation inside of the Cont
 
 Author
 ----
-Writed by Dorin Gheorghe Brage
+Writed by Dorin Gheorghe Brage. Feel free to contact me if you found any bug or if you want to contribute you're free to do it. =)
